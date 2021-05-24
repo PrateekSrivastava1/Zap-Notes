@@ -2,20 +2,9 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
-// import notes from "../notes";
 import Entry from "./Entry";
 
-// function createNotes(data) {
-//   return (
-//     <Note
-//       key={data.key}
-//       title={data.title}
-//       content={data.content}
-//     />
-//   );
-// }
-
-function App() {
+function Home() {
 
   const [notes, setNotes] = useState([]);
 
@@ -37,7 +26,6 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <Note /> */}
       <Entry
         onAdd={createNotes}
       />
@@ -49,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

@@ -1,6 +1,5 @@
 import React from "react";
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-// import notes from "../notes";
 
 function Note(props) {
 
