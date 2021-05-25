@@ -1,5 +1,4 @@
 import firebase from "firebase";
-
 var firebaseConfig = {
     apiKey: "AIzaSyBhn4QFu6vglOf7qCs2egY1f-a1oxL5MEQ",
     authDomain: "react-todo-webapp-6a666.firebaseapp.com",

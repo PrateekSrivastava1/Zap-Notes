@@ -2,7 +2,8 @@ import React, {useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 import Home from "./Components/Home";
 import SignInSide from "./SignInSide";
-import fire from "./Firebase-config";
+import fire from "./fire";
+
 const Auth = () => {
 
   const [user, setUser] = useState('');
@@ -13,13 +14,13 @@ const Auth = () => {
   const [hasAccount, setHasAccount] = useState(false);
 
   const clearInputs = () => {
-    setEmail("");
-    setPassword("");
+    setEmail('');
+    setPassword('');
   }
 
   const clearErrors = () => {
-    setEmailError("");
-    setPasswordError("");
+    setEmailError('');
+    setPasswordError('');
   }
 
   const handleLogin = () => {
@@ -57,45 +58,46 @@ const Auth = () => {
          }
        });
  }
-
- const handleLogout = () => {
+ 
+ const handleLogout = () => {   
    fire.auth().signOut();
- };
+ }; 
  const authListener = () => {
-   fire.auth().onAuthStateChanged(user => {
-     if(user){
-      clearErrors();
-       setUser(user);
+   fire.auth().onAuthStateChanged(user =>  {
+     console.log(user); 
+     if(user){ 
+      clearInputs(); 
+       setUser(user); 
      }
      else
      {
-       setUser("");
-     }
+       setUser("");  
+     } 
    });
  };
 
  useEffect(() => {
     authListener();
  }, []); 
+ console.log(user);
 return (
     <div >
-
-    {user ? (
-        <Home handleLogout={handleLogout} />
-    ) : (
+    {user ? ( 
+        <Home handleLogout={handleLogout} /> 
+    ) : ( 
         <SignInSide 
             email={email}
             setEmail={setEmail}
-            password={setPassword}
+            password={password}
             setPassword={setPassword}
             handleLogin={handleLogin}
             handleSignup={handleSignup}
             hasAccount={hasAccount}
-            setHasAccount={setHasAccount}
+            setHasAccount={setHasAccount} 
             emailError={emailError}
-            passwordError={passwordError}
+            passwordError={passwordError} 
         /> 
-    )}
+    )} 
     </div>
 );
 }

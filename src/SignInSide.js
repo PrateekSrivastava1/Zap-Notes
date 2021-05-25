@@ -13,6 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Sc from "./images/Screenshot.png";
+import Auth from "./Auth";
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -71,6 +72,11 @@ export default function SignInSide(props) {
         passwordError
     } = props;
 
+    const handleChange = (e) => {
+        const text = e.target.value
+        setPassword(text)
+    }
+
     return (
         <Grid container component="main" className={classes.root}>
             <CssBaseline />
@@ -81,7 +87,7 @@ export default function SignInSide(props) {
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        Sign in
+                        Sign in 
           </Typography>
                     <form className={classes.form} noValidate>
                         <TextField
@@ -91,7 +97,7 @@ export default function SignInSide(props) {
                             fullWidth
                             type="text"
                             value={email}
-                            label="Email Address"
+                            label="Email Address" 
                             autoComplete="email"
                             autoFocus 
                             onChange={(e) => setEmail(e.target.value)}
@@ -102,9 +108,10 @@ export default function SignInSide(props) {
                             margin="normal"
                             required
                             fullWidth
-                            type="text"
-                            value={password}
+                            type="password"
+                            value={password} 
                             label="Password"
+                            autoComplete="password"
                             autoFocus 
                             onChange={(e) => setPassword(e.target.value)}
                         />
@@ -128,12 +135,12 @@ export default function SignInSide(props) {
                            ) : (
                             <>
                             <Button
-                             type="submit"
-                             fullWidth
+                             type="submit" 
+                             fullWidth 
                              variant="contained"
                              color="primary"
                              className={classes.submit} 
-                             onClick={handleSignup}
+                             onClick={handleSignup} 
                              >Sign Up</Button>
                              <p>
                                      Have an account ?
