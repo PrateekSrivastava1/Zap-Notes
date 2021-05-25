@@ -1,8 +1,7 @@
 ### Zap Notes
 This is a WebApplication to save whatever you want, you can use it as a daily todo list app or to save your necessary information, links, etc.
 
-![Screen Shot](https://ibb.co/smgZ8F6)
-
+![Screen Shot](https://i.ibb.co/8KmH1jd/Screenshot-578.png)
 
 ### Built With:
 * HTML
