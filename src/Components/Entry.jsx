@@ -20,7 +20,7 @@ function Entry(props) {
     setList((prevList) => {
       return {
         ...prevList,
-        [name]: value,
+        [name]: value, 
       };
     });
   }
@@ -30,8 +30,8 @@ function Entry(props) {
       title: "",
       content: "",
     });
-    event.preventDefault();
-  }
+    event.preventDefault(); 
+  } 
   return (
     <div>
       <Zoom in={true}>
