@@ -9,7 +9,6 @@ This is a WebApplication to save whatever you want, you can use it as a daily to
 * CSS
 * JavaScript
 * React.js
-* Firebase
 * Material UI
 * Transparent Textures
 
