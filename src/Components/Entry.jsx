@@ -52,7 +52,7 @@ function Entry(props) {
             placeholder="Take a note..."
             rows={expand ? 3 : 1}
           />
-          <Fab onClick={submitNotes}>
+          <Fab onClick={submitNotes}> 
             <PlusOneIcon />
           </Fab>
         </form>
