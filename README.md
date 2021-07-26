@@ -12,13 +12,10 @@ This is a WebApplication to save whatever you want, you can use it as a daily to
 * Material UI
 * Transparent Textures
 
+## Use it here: [zap-notes](https://zap-notes.herokuapp.com/)
+
 ### Features:
 It provides simple UI to interact and perform basic operations like add and delete particular Record.
-
-### How to use:
-1: If you are new user then just signUp
-else click on signIn text, then button will turn into SignIn.
-2: Then just SignIn.
 
 ### Getting Started:
 
